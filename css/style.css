@@ -1,0 +1,235 @@
+/* © Victor Loots, 2022
+/*
+/* Fonts */
+@font-face {
+  font-family: "domineregular";
+  src: url("../fonts/domine-regular-webfont.eot");
+  src: url("../fonts/domine-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/domine-regular-webfont.woff2") format("woff2"),
+    url("../fonts/domine-regular-webfont.woff") format("woff"),
+    url("../fonts/domine-regular-webfont.ttf") format("truetype"),
+    url("../fonts/domine-regular-webfont.svg#domineregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "montserratregular";
+  src: url("../fonts/montserrat-regular-webfont.eot");
+  src: url("../fonts/montserrat-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/montserrat-regular-webfont.woff2") format("woff2"),
+    url("../fonts/montserrat-regular-webfont.woff") format("woff"),
+    url("../fonts/montserrat-regular-webfont.ttf") format("truetype"),
+    url("../fonts/montserrat-regular-webfont.svg#montserratregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "open_sansregular";
+  src: url("../fonts/opensans-regular-webfont.eot");
+  src: url("../fonts/opensans-regular-webfont.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/opensans-regular-webfont.woff2") format("woff2"),
+    url("../fonts/opensans-regular-webfont.woff") format("woff"),
+    url("../fonts/opensans-regular-webfont.ttf") format("truetype"),
+    url("../fonts/opensans-regular-webfont.svg#open_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'makoregular';
+  src: url('../fonts/mako-regular-webfont.eot');
+  src: url('../fonts/mako-regular-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/mako-regular-webfont.woff2') format('woff2'),
+    url('../fonts/mako-regular-webfont.woff') format('woff'),
+    url('../fonts/mako-regular-webfont.ttf') format('truetype'),
+    url('../fonts/mako-regular-webfont.svg#makoregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+/* Variabelen */
+:root {
+  font-size: 30px;
+  --font_titel: "domineregular", Georgia, serif;
+  --font_subtitel: "montserratregular", Verdana, sans-serif;
+  --font-brood: "makoregular", helvetica, sans-serif;
+  --kleur_wit: #f8f7f3;
+  --kleur_zwart: #303030;
+}
+
+/* 
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*
+/* Standards */
+body {
+  min-height: 100%;
+  color: var(--kleur_zwart);
+  background-color: var(--kleur_wit);
+  font-family: var(--font-brood);
+  font-size: 0.5rem;
+  line-height: 1.5;
+}
+
+#container {
+  padding: 1rem;
+  background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 50%,#1e5799 100%);
+}
+
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto;
+  gap: 0.5rem;
+}
+
+main h2 {
+  grid-area: 1 / 1 / span 1/ span 6;
+  letter-spacing: 10px;
+  font-size: 3rem;
+  text-align: center;
+  color: #cf1831;
+  text-shadow: 2px 2px #303030;
+
+}
+main h2 img{
+  display: inline-block;
+  margin: 0 auto;
+}
+
+main p:nth-of-type(1) {
+  grid-area: 2 / 1 /span 1/ span 3;
+}
+
+
+
+main h3:nth-of-type(1) {
+  grid-area: 3 / 5 /span 1/span 2;
+}
+
+main p:nth-of-type(2) {
+  grid-area: 4 / 4 /span 1/ span 3;
+}
+main img:nth-of-type(1) {
+  display: block;
+  grid-area: 4 /1 / span 1 / span3;
+  max-width: 30%;
+  height: auto;  
+}
+
+main p:nth-of-type(3) {
+  grid-area: 5 / 1 /span 1/ span 3;
+}
+main img:nth-of-type(2) {
+  display: block;
+  grid-area: 5 / 4 / span 1 / span 2;
+  max-width: 100%;
+  height: auto;  
+}
+
+blockquote{
+  grid-area: 6 / 2 /span 1 / span 4;
+ 
+}
+cite{
+  grid-area: 7/ 5 /span 1 / span 1;
+}
+
+main p:nth-of-type(4) {
+  grid-area: 8 / 4 /span 1/ span 3;
+}
+
+main p:nth-of-type(5) {
+  grid-area: 9 / 1 /span 1/ span 3;
+}
+
+main p:nth-of-type(6) {
+  grid-area: 10 / 4 /span 1/ span 3;
+}
+
+
+main h3:nth-of-type(2) {
+  grid-area: 11 / 3 /span 1/ span 3;
+}
+
+main p:nth-of-type(7) {
+  grid-area: 12 / 1 /span 1/ span 6;
+}
+
+main ul:nth-of-type(1) {
+  grid-area: 13 / 2 /span 1/ span 2;
+}
+
+main ul:nth-of-type(2) {
+  grid-area: 13 / 4 /span 1/ span 2;
+}
+
+h3 {
+  padding: 0.5rem 0;
+  letter-spacing: 5px;
+  color: #e5e5e5;
+  text-shadow: 1px 1px #303030;
+}
+
+
+p {
+  padding: 0.4rem 0;
+}
+
+blockquote {
+  font-size: 2rem;
+  color: #1e5799;
+  text-shadow: 2px 2px #303030;
+  border-left: 10px solid #1e5799;
+  margin: 1.5rem 10px;
+  padding: 0.5rem 10px;
+  quotes: "\201c" "\301D" "\2018" "\2019";
+} 
+
+blockquote::before {
+  content: open-quote;
+  color: #e5e5e5;
+  font-size: 4rem;
+  line-height: 100%;
+  margin-right: 0.2rem;
+  vertical-align: -0.4rem;
+}
+
+cite {
+  display: block;
+  text-align: right;
+}
+
+.parallax {
+  background-image: url(../img/reebok_pump.png);
+  min-height: 250px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  font-family: var(--font_subtitel);
+  padding: 1rem 0 0.5rem 0;
+}
+
+@media (min-width: 750px) {
+  #container {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+  }
+}
