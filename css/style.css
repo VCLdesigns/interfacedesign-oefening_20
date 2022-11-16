@@ -93,7 +93,7 @@ body {
   width: 1200px;
   height: 100vh;
   margin: 0 auto;
-  
+
 }
 
 .grid_container::before {
@@ -104,7 +104,7 @@ body {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
 .grid_item {
@@ -112,35 +112,76 @@ body {
   width: 100%;
   height: 100%;
 }
-.grid_shoe{
-  grid-area: 3/4;
+
+.grid_shoe {
+  grid-area: 3/3;
 }
 
 .grid_slogan {
-  grid-area: 7/4/6/8;
+  grid-area: 2/5/3/7;
 }
+
 .grid_title {
-  grid-area: 2/1/2/3;
+  grid-area: 1/1/2/3;
 }
-.grid_tekst{
-  grid-area: 3/1/4/3;
+
+.grid_tekst {
+  grid-area: 2/1/4/3;
 }
-.grid_shoe img, .grid_slogan h2{
-  transform: rotate(-45deg);
-  transform-origin: bottom left;
+
+.grid_shoe img:hover {
+  display: block;
+  cursor: pointer;
+  transform: rotate(360deg) scale(1.5);
+  transition: transform 0.2s linear;
 }
+
 .grid_slogan h2 {
   letter-spacing: 10px;
   font-size: 3rem;
   color: #1e5799;
-  text-shadow: 2px 2px #303030;
+  text-shadow: 3px 3px 3px #303030;
+  text-align: center;
 
 }
-.grid_title h3{
-  color: #1e5799;
+
+.arrow {
+  border: solid #1e5799;
+  border-width: 0 6px 6px 0;
+  display: inline-block;
+  padding: 3px;
 }
-.grid_tekst p{
-  padding: 0.4rem 0;
+
+.arrow_up {
+  transform: rotate(-135deg);
+}
+
+.arrow_down {
+  transform: rotate(45deg);
+}
+
+.grid_title h2 {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 3px #303030;
+}
+
+.grid_tekst p {
+  font-size: 1.5rem;
+  padding: 0.4rem 4rem 0 0;
+}
+
+.grid_tekst p:nth-of-type(2) {
+  padding: 1rem 10rem 0 0;
+}
+
+.dropcap::first-letter {
+  float: left;
+  font-size: 7rem;
+  line-height: 0.6;
+  margin: 0.2em 0.1em 0.1em 0;
+
 }
 
 
