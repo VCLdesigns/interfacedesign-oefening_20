@@ -104,7 +104,7 @@ body {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .grid_item {
@@ -118,7 +118,8 @@ body {
 }
 
 .grid_slogan {
-  grid-area: 2/5/3/7;
+  grid-area: 2/3/5/28;
+  transform: rotate(60deg);
 }
 
 .grid_title {
@@ -132,17 +133,41 @@ body {
 .grid_shoe img:hover {
   display: block;
   cursor: pointer;
-  transform: rotate(360deg) scale(1.5);
+  transform: rotate(360deg) scale(1.3);
   transition: transform 0.2s linear;
 }
 
-.grid_slogan h2 {
+.grid_slogan blockquote {
+  position: relative;
   letter-spacing: 10px;
   font-size: 3rem;
+  font-weight: 900;
   color: #1e5799;
   text-shadow: 3px 3px 3px #303030;
   text-align: center;
+  margin-left: 1rem;
+}
 
+.grid_slogan blockquote:before,
+.grid_slogan blockquote:after {
+  position: absolute;
+  color: #1e5799;
+  text-shadow: 3px 3px 3px #303030;
+  font-size: 13rem;
+  font-weight: 100;
+  line-height: 1rem;
+}
+
+.grid_slogan blockquote:before {
+  content: open-quote;
+  top: 4rem;
+  left: 13rem;
+}
+
+.grid_slogan blockquote:after {
+  content: close-quote;
+  bottom: -4rem;
+  right: 13rem;
 }
 
 .arrow {
@@ -167,6 +192,17 @@ body {
   text-shadow: 2px 2px 3px #303030;
 }
 
+.bright {
+  font-weight: 900;
+  text-shadow: none;
+  background-color: #f3ec78;
+  background-image: linear-gradient(to right, #ea2803 3%, #ff6600 50%, #c72200 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 .grid_tekst p {
   font-size: 1.5rem;
   padding: 0.4rem 4rem 0 0;
@@ -179,6 +215,8 @@ body {
 .dropcap::first-letter {
   float: left;
   font-size: 7rem;
+  color: #1e5799;
+  text-shadow: 3px 3px 3px #303030;
   line-height: 0.6;
   margin: 0.2em 0.1em 0.1em 0;
 
